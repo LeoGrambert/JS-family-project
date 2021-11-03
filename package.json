@@ -1,0 +1,57 @@
+{
+  "name": "family-project",
+  "version": "1.0.0",
+  "description": "Front-end of the project used to easily collect and archive old family photos (from 1930 to today).",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "eslint \"src/**/*.js\" --fix",
+    "lint": "eslint \"src/**/*.js\"",
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": [
+      "yarn prettier",
+      "yarn lint:fix",
+      "yarn lint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoGrambert/JS-family-project.git"
+  },
+  "keywords": [
+    "javascript",
+    "frontend"
+  ],
+  "author": "Leo Grambert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeoGrambert/JS-family-project/issues"
+  },
+  "homepage": "https://github.com/LeoGrambert/JS-family-project/issues#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "@types/node": "^16.7.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "tailwind-toast": "^1.1.0",
+    "webpack-serve": "^4.0.0"
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Album de famille</title>
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f9caa2a9a3.js"></script>
+</head>
+
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+    <nav id="header" class="w-full z-30 top-0 py-1">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+            <div class="order-1 md:order-2">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+                    href="#">
+                    Album de famille
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-white py-8">
+        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+            <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12" id ="pictures"></div>
+        </div>
+    </section>
+
+    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+        <div class="container flex px-3 py-8 ">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full lg:w-1/2 ">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold text-gray-900">Développement</h3>
+                        <p class="pt-4">
+                            Le code source du projet est accessible sur les dépôts ci-dessous et peut être
+                            librement réutilisé.
+                        </p>
+                        <p><a href="https://github.com/LeoGrambert/JS-family-project"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+                        <a href="https://github.com/LeoGrambert/STRAPI-family-project"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a></p>
+                        <p class="py-4">
+                            Les données traitées (les images et descriptions) sont <strong>restreintes à un cercle familial</strong>.
+                            Aucune donnée n'est accessible depuis le code source.
+                        </p>
+                        <p class="py-4">
+                            Pour toute question: <a href="mailto:leogrambert@protonmail.com">leogrambert@protonmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="dist/polyfill.bundle.js"></script>
+    <script src="dist/app.bundle.js"></script>
+</body>
+
+</html>
