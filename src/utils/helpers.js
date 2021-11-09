@@ -8,7 +8,9 @@ const createGenericElement = (type, classNa = null, text = null, attributes = []
   return elt;
 };
 
-export {
-  getParam,
-  createGenericElement,
-};
+const convertDate = (iso) => {
+  const date = new Date(iso);
+  return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+}
+
+export { getParam, createGenericElement, convertDate };

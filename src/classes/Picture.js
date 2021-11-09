@@ -1,4 +1,4 @@
-import { createGenericElement } from "../utils/helpers";
+import { createGenericElement, convertDate } from "../utils/helpers";
 import { strapiHost } from "../utils/constants";
 
 export class Picture {
@@ -6,10 +6,10 @@ export class Picture {
     this.id = picture.id;
     this.description = picture.description;
     this.image = `${strapiHost}${picture.image.url}`;
+    this.publishedDate = `Publié le ${convertDate(picture.published_at)}`;
   }
 
   createPictureCard() {
-    console.log(this.image)
     const container = createGenericElement('div', `w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col`);
     const link = createGenericElement('a', null, null, [{ key: 'href', value: `../pages/picture.html?id=${this.id}` }]);
     const img = createGenericElement('img', 'hover:grow hover:shadow-lg', null, [{ key: 'src', value: this.image }]);
@@ -26,8 +26,9 @@ export class Picture {
       { key: 'src', value: this.image },
     ]);
     const description = createGenericElement('div', 'mt-4 mb-4', this.description);
+    const publishedDate = createGenericElement('div', 'mt-4 mb-4', this.publishedDate);
     leftBlock.append(image);
-    rightBlock.append(description);
+    rightBlock.append(description, publishedDate);
     container.append(leftBlock, rightBlock);
     return container;
   }
