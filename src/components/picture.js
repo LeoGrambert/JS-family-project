@@ -5,7 +5,6 @@ import { Picture } from '../classes/Picture';
 const picture = async () => {
   const id = getParam('id');
   const pictures = await getPictures(id);
-  console.log(pictures)
   const myPicture = new Picture(pictures[0]);
   hydratePicture(myPicture);
 };

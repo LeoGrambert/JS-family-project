@@ -1,3 +1,3 @@
-const strapiHost = "http://localhost:1337";
+const strapiHost = process.env.STRAPI_HOST;
 
 export { strapiHost };
