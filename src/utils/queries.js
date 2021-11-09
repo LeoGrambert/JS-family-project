@@ -1,11 +1,14 @@
 import notify from './toast';
-import { strapiHost } from './constants';
+import { strapiHost, strapiToken } from './constants';
 
 const getPictures = async (id = null) => {
   try {
-    const response = await fetch(
-      `${strapiHost}/images${id ? `?id=${id}` : ""}`
-    );
+    const response = await fetch(`${strapiHost}/images${id ? `?id=${id}` : ''}`, {
+      headers: {
+        Authorization:
+          `Bearer ${strapiToken}`,
+      },
+    });
     if (!response.ok) return displayError(response.statusText, response.status);
     return response.json();
   } catch (err) {
