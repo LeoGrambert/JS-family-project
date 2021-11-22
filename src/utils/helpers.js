@@ -13,4 +13,6 @@ const convertDate = (iso) => {
   return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
 }
 
-export { getParam, createGenericElement, convertDate };
+const displayElt = (elt, property) => document.querySelector(elt).style.display = property;
+
+export { getParam, createGenericElement, convertDate, displayElt };
